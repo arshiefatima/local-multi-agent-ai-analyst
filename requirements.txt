@@ -1,0 +1,5 @@
+streamlit
+langchain
+langgraph
+scikit-learn
+numpy
