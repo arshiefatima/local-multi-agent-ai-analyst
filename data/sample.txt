@@ -1,0 +1,7 @@
+AI Engineering is a fast-growing field focused on building intelligent systems using machine learning and large language models.
+
+LangChain and LangGraph are popular tools for building AI agents and workflows.
+
+RAG (Retrieval-Augmented Generation) helps AI systems fetch relevant information before generating answers.
+
+Switching from QA Automation to AI Engineering requires learning Python, LLMs, and system design.
