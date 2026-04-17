@@ -1,39 +1,22 @@
-from sentence_transformers import SentenceTransformer
-import faiss
-import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Load local embedding model
-model = SentenceTransformer('all-MiniLM-L6-v2')
-
-# Store texts globally (simple version)
 documents = []
-index = None
-
+vectorizer = TfidfVectorizer()
+vectors = None
 
 def create_vectorstore():
-    global documents, index
+    global documents, vectors
 
     with open("data/sample.txt", "r") as file:
         text = file.read()
 
-    # Split into chunks (simple split)
     documents = text.split("\n")
-
-    # Convert to embeddings
-    embeddings = model.encode(documents)
-
-    # Create FAISS index
-    dimension = embeddings.shape[1]
-    index = faiss.IndexFlatL2(dimension)
-    index.add(np.array(embeddings))
+    vectors = vectorizer.fit_transform(documents)
 
 
 def search_vectorstore(query):
-    global index, documents
+    query_vec = vectorizer.transform([query])
+    similarity = (vectors * query_vec.T).toarray()
 
-    query_embedding = model.encode([query])
-
-    D, I = index.search(np.array(query_embedding), k=2)
-
-    results = [documents[i] for i in I[0]]
-    return " ".join(results)
+    best_idx = similarity.argmax()
+    return documents[best_idx]
