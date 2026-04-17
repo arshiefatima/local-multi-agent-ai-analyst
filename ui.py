@@ -4,20 +4,29 @@ from core.vectorstore import create_vectorstore
 
 st.set_page_config(page_title="AI Research Agent", layout="centered")
 
-st.title("🤖 Local Multi-Agent AI System")
-st.write("Ask questions based on your data")
+# Header
+st.title("🤖 Multi-Agent AI Research System")
+st.markdown("🚀 Powered by Local AI + RAG + Multi-Agent Workflow")
 
-# Initialize vector DB
+# Initialize DB
 create_vectorstore()
 
-query = st.text_input("Enter your question:")
+# Input box
+query = st.text_input("💬 Ask your question:")
 
+# Button
 if st.button("Run AI"):
     if query:
-        with st.spinner("Thinking..."):
+        with st.spinner("🧠 Agents are thinking..."):
             result = run_system(query)
 
-        st.subheader("Result:")
+        st.success("✅ Answer Generated")
+
+        st.markdown("### 📊 Final Result")
         st.write(result)
     else:
-        st.warning("Please enter a question.")
+        st.warning("⚠️ Please enter a question")
+
+# Footer
+st.markdown("---")
+st.markdown("Built with ❤️ using Streamlit | Multi-Agent AI System")
