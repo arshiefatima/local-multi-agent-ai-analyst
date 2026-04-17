@@ -28,5 +28,5 @@ streamlit run ui.py
 ![result1](screenshots/result1.png)
 ![result2](screenshots/result2.png)
 ![result3](screenshots/result3.png)
-![UIhome](screenshots/UIhome.png)
-![UIresult](screenshots/UIresult.png)
+![home](screenshots/home.png)
+![result](screenshots/result.png)
