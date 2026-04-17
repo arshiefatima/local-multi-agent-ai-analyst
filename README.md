@@ -22,3 +22,10 @@ This project is a fully local AI system that uses multiple agents to perform res
 ```bash
 pip install -r requirements.txt
 streamlit run ui.py
+
+## 📸 UI Screenshots
+![result1](screenshots/result1.png)
+![result2](screenshots/result2.png)
+![result3](screenshots/result3.png)
+![UIhome](screenshots/UIhome.png)
+![UIresult](screenshots/UIresult.png)
