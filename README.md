@@ -24,6 +24,7 @@ pip install -r requirements.txt
 streamlit run ui.py
 
 ## 📸 UI Screenshots
+## 📸 UI Screenshots
 ![result1](screenshots/result1.png)
 ![result2](screenshots/result2.png)
 ![result3](screenshots/result3.png)
