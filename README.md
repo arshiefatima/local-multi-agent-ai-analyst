@@ -2,6 +2,9 @@
 
 This project is a fully local AI system that uses multiple agents to perform research, reasoning, and decision-making using RAG (Retrieval-Augmented Generation).
 
+## 🔗 Live Demo
+🚀 [Open AI App](https://local-multi-agent-ai-analyst-cp33hz9vswwrxrzphk3nmt.streamlit.app/)
+
 ## 🚀 Features
 - Multi-agent architecture (Research, Reasoning, Decision)
 - FAISS-based semantic search
